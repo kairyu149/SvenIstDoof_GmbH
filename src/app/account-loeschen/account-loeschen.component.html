@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div id="picturePosition" class="divCenter">
+  <img src="images/delete-profile.png" height="70" width="70"/>
+</div>
+
+<p id="siteTitle" class="divCenter">PROFIL LÖSCHEN</p>
+
+<table align="center">
+  <colgroup>
+    <col width="100">
+    <col width="300">
+    <col width="100">
+  </colgroup>
+  <tr>
+    <td align="center" valign="middle" id="fontPassword">PASSWORT*</td>
+    <td align="center" valign="middle"><input type="password" id="passwordField" class="field-border"></td>
+    <td> </td>
+  </tr>
+</table>
+
+<div class="divCenter">
+  <button type="submit" id="delete" (click)="deleteAccount()">LÖSCHEN</button>
+</div>
+
+<app-modal-error [(visible)]="errorService.error.show"></app-modal-error>
+<app-modal-success [(visible)]="errorService.success.show"></app-modal-success>
+<app-modal-gear [(visible)]="errorService.gear.show"></app-modal-gear>
+
+<app-footer></app-footer>

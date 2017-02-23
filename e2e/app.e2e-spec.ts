@@ -1,10 +1,10 @@
-import { SvenIstDoofGmbHFinalPage } from './app.po';
+import { SssPage } from './app.po';
 
-describe('sven-ist-doof-gmb-h-final App', function() {
-  let page: SvenIstDoofGmbHFinalPage;
+describe('sss App', function() {
+  let page: SssPage;
 
   beforeEach(() => {
-    page = new SvenIstDoofGmbHFinalPage();
+    page = new SssPage();
   });
 
   it('should display message saying app works', () => {

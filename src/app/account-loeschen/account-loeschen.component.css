@@ -1,0 +1,95 @@
+#picturePosition {
+  margin: 100px 0px 12px 0px;
+}
+
+#siteTitle {
+  font-size: 20pt;
+  font-family: brandon-grotesque-black;
+  margin-bottom: 20px;
+}
+
+/*** PASSWORT ***/
+#passwordField {
+  width: 300px;
+  height: 40px;
+  border: 3px solid #d3ddf2;
+  border-radius: 7px;
+}
+
+#passwordField:focus {
+  border-color: #8da6d6;
+}
+
+#fontPassword {
+  color: #8da6d6;
+}
+/*** PASSWORT ENDE ***/
+
+.divCenter {
+  text-align: center;
+}
+
+/*** BUTTON ***/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#delete {
+  border: solid;
+  border-color: transparent;
+  background-color: #001a3a;
+  border-radius: 7px;
+  margin-top: 20px;
+  width: 150px;
+  color: white;
+  height: 40px;
+}
+/*** BUTTON ENDE ***/
+
+/*** DIALOG ***/
+.dialogSuc {
+  z-index: 1000;
+  position: fixed;
+  left: calc((100% - 300px) / 2);
+  top: calc((100% - 200px) / 2);
+  height: 200px;
+  width: 300px;
+  background-color: #76b82d;
+  border-style: solid;
+  border-radius: 12px;
+  border-color: white;
+
+}
+
+.dialog_close-btn {
+  border: 0;
+  color: #2d2d2d;
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  background: url(images/delete.png) no-repeat;
+}
+
+.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.dialogText {
+  margin: 5px;
+  color: white;
+  width: 270px;
+  height: 80px;
+  text-align: center;
+  font-family: brandon-grotesque-black;
+}
+/*** DIALOG ENDE ***/

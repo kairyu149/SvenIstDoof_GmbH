@@ -1,0 +1,115 @@
+/* Bilder */
+#pictureContainer{
+  width: 800px;
+}
+
+.pictureRowMargin {
+  margin: 10px;
+}
+
+#pictureCurrentOld {
+  margin-top: 100px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+#pictureCurrentNew {
+  margin-top: 100px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+/* Bilder Ende */
+
+#siteTitle {
+  font-size: 20pt;
+  font-family: brandon-grotesque-black;
+  margin-bottom: 10px;
+}
+
+.divCenter {
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Buttons */
+
+.save {
+  border: solid;
+  border-color: transparent;
+  background-color: #001a3a;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+  color: white;
+  height: 40px;
+}
+
+
+.cancel {
+  border: solid;
+  border-color: transparent;
+  background-color: #d3ddf2;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+  color: #4565ad;
+  height: 40px;
+}
+
+/* Button Ende */
+
+
+/* Dialog */
+
+.dialogSuc {
+  z-index: 1000;
+  position: fixed;
+  left: calc((100% - 300px) / 2);
+  top: calc((100% - 200px) / 2);
+  height: 200px;
+  width: 300px;
+  background-color: #76b82d;
+  border-style: solid;
+  border-radius: 12px;
+  border-color: white;
+
+}
+
+.dialog_close-btn {
+  border: 0;
+  color: #2d2d2d;
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  background: url(images/delete.png) no-repeat;
+}
+
+.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.dialogText {
+  margin: 5px;
+  color: white;
+  width: 270px;
+  height: 80px;
+  text-align: center;
+  font-family: brandon-grotesque-black;
+}
+
+/* Dialog */

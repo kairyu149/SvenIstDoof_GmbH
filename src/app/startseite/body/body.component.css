@@ -1,0 +1,269 @@
+#content {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 60px;
+  width: calc(100% + 15px);
+  padding: 5px;
+  height: calc(100% - 110px);
+  margin-bottom: 50px;
+}
+
+#pictureInBubble {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -15px;
+}
+
+.bubble {
+  width: 369px;
+  height: 120px;
+  background: url(images/contentTextBubble.png) no-repeat top left;
+  background-size: contain;
+  margin: 5px;
+}
+
+.bubble-text {
+  margin-top: 10px;
+  max-width: 250px;
+  height: 105px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.bubble-img {
+  padding: 15px;
+  margin-right: 15px;
+}
+
+#scrollButtonTop {
+  position: fixed;
+  z-index: 1;
+  left: calc(100% - 60px);
+  top: 80px;
+  background: url(images/chapter15/scrollUp.png) no-repeat;
+  color: transparent;
+  border-color: transparent;
+  height: 45px;
+  width: 45px;
+}
+
+#scrollButtonBottom {
+  position: fixed;
+  z-index: 1;
+  left: calc(100% - 60px);
+  bottom: 70px;
+  background: url(images/chapter15/scrollDown.png) no-repeat;
+  color: transparent;
+  border-color: transparent;
+  height: 45px;
+  width: 45px;
+}
+
+@media screen and (max-width: 1130px) {
+  .illustrationResponsive {
+    display: none;
+  }
+
+  .left-arrow {
+    left: 20px;
+  }
+
+  .flagResponsiveScreen {
+    display: none;
+  }
+
+  .left-arrow-white {
+    display: none;
+  }
+
+  .left-arrow-blue {
+    display: none;
+  }
+
+  #imageFlagtext1 {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .flagResponsiveHandy {
+    position: absolute;
+    top: -45px;
+    left: -5px;
+  }
+
+  .responsiveBubbles {
+    position: absolute;
+    margin-top: 50px;
+  }
+
+  #imageFlagtext2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #scrollButtonTop {
+    display: none;
+  }
+
+  #scrollButtonBottom {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 1130px) {
+  .flagResponsiveHandy {
+    display: none;
+
+  }
+
+  #imageFlagtext2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #imageFlagtext1 {
+    position: absolute;
+    top: 17px;
+    left: calc(45%);
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #imageFlagtext3 {
+    display: none;
+  }
+}
+
+#illustrationRight {
+  text-align: left;
+  margin-top: 44px;
+}
+
+#illustrationLeft {
+  text-align: right;
+}
+
+#studentText {
+  font-family: dr-hh-el;
+  font-size: 18pt;
+  color: #001a3a;
+}
+
+#numberFont {
+  font-family: roboto-thin;
+  font-size: 7.5pt;
+  text-align: left;
+  color: #d3ddf2;
+  padding-top: 100px;
+  padding-left: 5px;
+  position: absolute;
+}
+
+.left-arrow {
+  display: inline-block;
+  position: absolute;
+  font-family: roboto-thin;
+  font-size: 13pt;
+  color: #fff;
+  background-color: #001a3a;;
+  border-radius: 7px;
+  width: 250px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-left: 40px;
+  z-index: 10;
+  padding: 2px;
+}
+
+.left-arrow-blue {
+  display: inline-block;
+  position: absolute;
+  color: transparent;
+  background-color: transparent;;
+  width: 250px;
+  border: 2px transparent;
+  margin-left: 40px;
+  z-index: 10;
+  padding: 2px;
+}
+
+.left-arrow-blue:after {
+  content: '';
+  display: block;
+  z-index: 2;
+  position: absolute;
+  right: 246px;
+  top: 19px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #001a3a;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.left-arrow-white {
+  display: inline-block;
+  position: absolute;
+  color: transparent;
+  background-color: transparent;;
+  width: 250px;
+  border: 2px transparent;
+  margin-left: 40px;
+  z-index: 9;
+  padding: 2px;
+}
+
+.left-arrow-white:after {
+  content: '';
+  display: block;
+  z-index: -1;
+  position: absolute;
+  right: 249px;
+  top: 19px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid white;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.imageFlag {
+  position: relative;
+  width: 100%; /* for IE 6 */
+}
+
+.imageFlagText {
+  width: 340px;
+  font-size: 14px;
+  font-family: widolte_regular;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1400px) {
+  #imageFlagtext1 {
+    position: absolute;
+    top: 17px;
+    left: calc(25%);
+    text-align: left;
+  }
+
+}
+
+#imageFlagtext2 {
+  position: absolute;
+  top: 17px;
+}
+
+#imageFlagtext3 {
+  position: absolute;
+  top: -27px;
+  left: -20px;
+}

@@ -1,0 +1,64 @@
+<!-- col-xs Teil von Bootstrap -> Grid -->
+<section class="row" [style.background]="bodyDynamics.chapterColor" id="content">
+
+  <section class="col-xs-4" id="illustrationLeft">
+    <div class="imageFlag">
+      <img [src]="bodyDynamics.chapterFlag" class="flagResponsiveScreen">
+      <p class="imageFlagText" id="imageFlagtext1">{{bodyDynamics.edPlansFlagText}}</p>
+    </div>
+    <div *ngFor="let illustration of siteIllustrations; let i=index" class="illustrationResponsive">
+      <template [ngIf]="i<((bodyDynamics.chapterBubbles.length)/5)"><img
+        [src]="illustration.illustrationLeft"
+        class="illustration-left"/></template>
+    </div>
+  </section>
+  <div class="responsiveBubbles col-xs-4" align="center">
+    <img [src]="bodyDynamics.chapterFlag" class="flagResponsiveHandy">
+    <p class="imageFlagText" id="imageFlagtext2">{{bodyDynamics.edPlansFlagText}}</p>
+    <p class="imageFlagText" id="imageFlagtext3">{{bodyDynamics.edPlansFlagText}}</p>
+
+    <div class="bubble" *ngFor="let cont of bodyDynamics.chapterBubbles; let i=index">
+      <section class="bubble-text col-xs-12">
+        <p id="studentText">
+          {{cont.studentText}}
+        </p>
+      </section>
+
+      <img (mouseover)="bodyDynamics.changeShowBubbleSidetext(i)"
+           (mouseleave)="bodyDynamics.changeShowBubbleSidetext(i)" id="pictureInBubble"
+           [src]="bodyDynamics.assignPictureInBubble(bodyDynamics.chapterBubbles[i])" height="40" width="40"/>
+
+
+      <section *ngIf="bodyDynamics.sideTextBooleanArray[i]" [innerHTML]="bodyDynamics.formatDate(cont.fromDate, i)"
+               class="left-arrow">
+
+      </section>
+      <section *ngIf="bodyDynamics.sideTextBooleanArray[i]" class="left-arrow-blue">
+      </section>
+      <section *ngIf="bodyDynamics.sideTextBooleanArray[i]" class="left-arrow-white">
+      </section>
+
+      <p id="numberFont">
+        {{cont.number}}
+    </div>
+  </div>
+  <section class="col-xs-4" id="illustrationRight">
+    <div *ngFor="let illustration of siteIllustrations; let i=index" class="illustrationResponsive">
+      <template [ngIf]="i<((bodyDynamics.chapterBubbles.length)/5)"><img
+        [src]="illustration.illustrationRight"
+        class="illustration-right"/></template>
+    </div>
+  </section>
+</section>
+
+
+<input type="submit" [style.background-image]="'url('+bodyDynamics.buttonUp+')'" id="scrollButtonTop"
+       onclick="window.scrollBy({top: -300, left: 0,  behavior: 'smooth'});">
+<input type="submit" [style.background-image]="'url('+bodyDynamics.buttonDown+')'" id="scrollButtonBottom"
+       onclick="window.scrollBy({top: 300, left: 0, behavior: 'smooth' });">
+
+
+
+
+
+

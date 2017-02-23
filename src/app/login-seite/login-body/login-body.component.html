@@ -1,0 +1,26 @@
+<img src="images/login/header.png" height="247" width="559" class="displayed" id="bild"/><br>
+
+<div id="Login">
+
+  <form>
+
+    <input type="text" placeholder="BENUTZERNAME" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" class="field-border inputLogin"
+           id="LoginInputUser"><br>
+
+    <input type="password" placeholder="PASSWORT" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="field-border inputLogin"
+           id="LoginInputPassword"><br>
+
+    <button id="loginButton" type="submit" (click)="login(username, password, savedLogin)" class="buttonLogin"
+            style="color: white">LOS!
+    </button>
+    <br>
+
+  </form>
+
+  <app-modal-error [(visible)]="errorService.error.show"></app-modal-error>
+
+  <app-modal-success [(visible)]="errorService.success.show"></app-modal-success>
+
+  <app-modal-gear [(visible)]="errorService.gear.show"></app-modal-gear>
+
+</div>

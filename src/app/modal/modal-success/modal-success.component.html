@@ -1,0 +1,11 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+  <ng-content></ng-content>
+
+  <img src="images/confirmation.png" height="70" width="70" class="displayed"/>
+
+  <p id="dialogText">{{errorService.success.text}}</p>
+
+
+  <button *ngIf="closable" (click)="errorService.resetSuccess()" aria-label="Close" class="dialog_close-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+</div>
+<div *ngIf="visible" class="overlay"></div>

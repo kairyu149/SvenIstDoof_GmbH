@@ -1,0 +1,11 @@
+{
+  "server" : "http://46.101.204.215:1337/api/V1",
+   "competences" : "/studentcompetence",
+   "illustrations" :"/chapterillustrations/",
+   "avatars" : "/avatar",
+   "chapters" : "/chapter",
+   "edPlan" : "/educationalPlan",
+   "student" : "/student",
+   "login": "/login",
+   "chgPassword": "/requestPasswordRecovery"
+}

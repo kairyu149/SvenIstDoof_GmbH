@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<div id="picturePosition" class="divCenter">
+  <img src="images/change-password.png" height="70" width="70"/>
+</div>
+
+<p id="siteTitle" class="divCenter">PASSWORT ÄNDERN</p>
+
+<form>
+  <table align="center">
+    <colgroup>
+      <col width="500">
+      <col width="300">
+      <col width="500">
+    </colgroup>
+    <tr>
+      <td align="right" valign="middle" class="fontPassword">AKTUELLES PASSWORT*&nbsp;</td>
+      <td align="center" valign="middle"><input id="oldPW"  name="oldPW" type="password" class="passwordField field-border"></td>
+      <td rowspan="3">
+        <div class="securityPW" *ngIf="!pwField.valid">
+          <div class="securityText left-arrow">Das Passwort muss
+            mindestens 7-stellig sein sowie einen Großbuchstaben,
+            eine Ziffer und ein Sonderzeichen
+            enthalten.
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="right" valign="middle" class="fontPassword">NEUES PASSWORT*&nbsp;</td>
+      <td align="center" valign="middle"><input id="newPW1" [(ngModel)]="password" class="passwordField field-border"
+                                              #pwField="ngModel" name="ngModel" type="password"
+                                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}">
+      </td>
+    </tr>
+
+
+    <tr>
+      <td align="right" valign="middle" class="fontPassword">PASSWORT BESTÄTIGUNG*&nbsp;</td>
+      <td align="center" valign="middle"><input id="newPW2" name="newPW1" type="password" class="passwordField field-border"></td>
+    </tr>
+
+
+  </table>
+
+  <div class="divCenter">
+    <button type="submit" id="changeButton" (click)="checkPassword()">ÄNDERN</button>
+  </div>
+
+  <app-modal-error [(visible)]="errorService.error.show"></app-modal-error>
+  <app-modal-success [(visible)]="errorService.success.show"></app-modal-success>
+  <app-modal-gear [(visible)]="errorService.gear.show"></app-modal-gear>
+
+
+</form>
+
+
+<app-footer></app-footer>
+

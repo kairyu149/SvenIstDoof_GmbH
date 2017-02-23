@@ -1,0 +1,228 @@
+<nav class="navbar navbar-fixed-top" id="header">
+  <section class="container-fluid">
+    <section class="row flex-items-xs-between">
+      <!-- Buttons links -->
+      <section class="col-xs-2">
+
+
+        <!-- Button Kapitelübersicht + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(0)" (mouseleave)="setDdUnvisible(0)" class="dd">
+          <section *ngIf="visibleArray[0]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[0]" class="upper-arrow-blue"></section>
+          <button type="button" class="nav-button " id="chapter-overview"></button>
+          <div *ngIf=visibleArray[0] class="dd-content dd-height" id="dd-chapter-overview">
+            <section class="dd-header">
+              <section class="row">
+                <img src="images/confirmation.png" class="col-xs-5 dd-header-picture"/>
+                <p class="dd-header-text-1 col-xs-7">
+                  CHECK!<br>KOMPETENZLISTE
+                </p>
+
+
+              </section>
+            </section>
+            <section class="dd-scrollable">
+              <a (click)="loadChapter(1)" class="ch00 ch01">DAS BIN ICH!</a>
+              <a (click)="loadChapter(2)" class="ch00 ch02">ICH UND DIE ANDEREN</a>
+              <a (click)="loadChapter(3)" class="ch00 ch03">DIE WELT UM MICH HERUM</a>
+              <a (click)="loadChapter(4)" class="ch00 ch04">ICH WERDE SELBSTSTÄNDIG</a>
+              <a (click)="loadChapter(5)" class="ch00 ch05">SICH BEWEGEN</a>
+              <a (click)="loadChapter(6)" class="ch00 ch06">LERNEN</a>
+              <a (click)="loadChapter(7)" class="ch00 ch07">ARBEITEN</a>
+              <a (click)="loadChapter(8)" class="ch00 ch08">GESTALTEN UND ERSCHAFFEN</a>
+              <a (click)="loadChapter(9)" class="ch00 ch09">SPRECHEN</a>
+              <a (click)="loadChapter(10)" class="ch00 ch10">FREMDSPRACHE</a>
+              <a (click)="loadChapter(11)" class="ch00 ch11">LESEN</a>
+              <a (click)="loadChapter(12)" class="ch00 ch12">SCHREIBEN</a>
+              <a (click)="loadChapter(13)" class="ch00 ch13">MESSEN</a>
+              <a (click)="loadChapter(14)" class="ch00 ch14">LÖSUNGEN FINDEN</a>
+              <a (click)="loadChapter(15)" class="ch00 ch15">ZÄHLEN UND RECHNEN</a>
+              <a (click)="loadChapter(16)" class="ch00 ch16">FORM UND RAUM ENTDECKEN</a>
+            </section>
+          </div>
+        </div>
+
+        <!-- Button Förderplan + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(1)" (mouseleave)="setDdUnvisible(1)" class="dd">
+          <section *ngIf="visibleArray[1]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[1]" class="upper-arrow-blue"></section>
+          <button (click)="getEdPlanData()" type="button" class="nav-button" id="educational-plan"></button>
+          <div *ngIf=visibleArray[1] class="dd-content" id="dd-educational-plan">
+            <section class="dd-header">
+              <section class="row">
+                <img src="images/educationalPlan-big.png" class="col-xs-5 dd-header-picture"/>
+                <p class="col-xs-7 dd-header-text-1">
+                  DU HAST {{bodyDynamics.edPlans.count}} AKTIVE FÖRDERPLÄNE.
+                </p>
+              </section>
+            </section>
+            <a *ngFor="let cont of bodyDynamics.edPlans.plans" (click)="loadEducationPlan(cont['_id'])">{{cont.name}}</a>
+          </div>
+        </div>
+
+        <!-- Button Das kann ich + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(2)" (mouseleave)="setDdUnvisible(2)" class="dd">
+          <section *ngIf="visibleArray[2]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[2]" class="upper-arrow-blue"></section>
+          <button type="button" class="nav-button " id="achieved-competences"></button>
+          <div *ngIf=visibleArray[2] class="dd-content dd-height" id="dd-achieved-competences">
+            <section class="dd-header">
+              <section class="row">
+                <img src="images/achievedCompetences-big.png" class="col-xs-5 dd-header-picture"/>
+                <p class="col-xs-7 dd-header-text-1">
+                  DAS<br>KANN<br>ICH!
+                </p>
+              </section>
+            </section>
+            <section class="dd-scrollable">
+              <a href="#" class="ch00 ch00">ALLE KOMPETENZEN</a>
+              <a (click)="loadCompetences(1)" class="ch00 ch01">DAS BIN ICH!</a>
+              <a (click)="loadCompetences(2)" class="ch00 ch02">ICH UND DIE ANDEREN</a>
+              <a (click)="loadCompetences(3)" class="ch00 ch03">DIE WELT UM MICH HERUM</a>
+              <a (click)="loadCompetences(4)" class="ch00 ch04">ICH WERDE SELBSTSTÄNDIG</a>
+              <a (click)="loadCompetences(5)" class="ch00 ch05">SICH BEWEGEN</a>
+              <a (click)="loadCompetences(6)" class="ch00 ch06">LERNEN</a>
+              <a (click)="loadCompetences(7)" class="ch00 ch07">ARBEITEN</a>
+              <a (click)="loadCompetences(8)" class="ch00 ch08">GESTALTEN UND ERSCHAFFEN</a>
+              <a (click)="loadCompetences(9)" class="ch00 ch09">SPRECHEN</a>
+              <a (click)="loadCompetences(10)" class="ch00 ch10">FREMDSPRACHE</a>
+              <a (click)="loadCompetences(11)" class="ch00 ch11">LESEN</a>
+              <a (click)="loadCompetences(12)" class="ch00 ch12">SCHREIBEN</a>
+              <a (click)="loadCompetences(13)" class="ch00 ch13">MESSEN</a>
+              <a (click)="loadCompetences(14)" class="ch00 ch14">LÖSUNGEN FINDEN</a>
+              <a (click)="loadCompetences(15)" class="ch00 ch15">ZÄHLEN UND RECHNEN</a>
+              <a (click)="loadCompetences(16)" class="ch00 ch16">FORM UND RAUM ENTDECKEN</a>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons rechts 1 -->
+      <section class="col-xs-3 float-xs-right text-xs-right">
+
+        <!-- Button Profil + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(3)" (mouseleave)="setDdUnvisible(3)" class="dd">
+          <section *ngIf="visibleArray[3]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[3]" class="upper-arrow-blue"></section>
+          <button (mouseover)="changeProfileBackgroundImage(avatarPictures[avatarID], true)"
+                  (mouseleave)="changeProfileBackgroundImage(avatarPictures[avatarID], false)"
+                  [style.backgroundImage]="profileBackgroundImage" type="button" class="nav-button "
+                  id="profile"></button>
+          <div *ngIf=visibleArray[3] class="dd-content" id="dd-profile">
+            <section class="dd-header">
+              <section class="row">
+                <img [src]="profileHeaderImage" class="col-xs-5 dd-header-picture"/>
+                <p class="col-xs-7 dd-header-text-1">
+                  {{headerdaten["forename"]}}<br>{{headerdaten["surname"]}}
+                </p>
+              </section>
+              <section class="dd-header-text-2">
+                {{headerdaten["birth"]}}
+              </section>
+            </section>
+            <a routerLink="/profilbildaendern">MEIN PROFILBILD ÄNDERN</a>
+            <a routerLink="/passwortaendern">MEIN PASSWORT ÄNDERN</a>
+            <a routerLink="/accountloeschen">MEIN PROFIL LÖSCHEN</a>
+          </div>
+        </div>
+
+        <!-- Button Schule + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(4)" (mouseleave)="setDdUnvisible(4)" class="dd">
+          <section *ngIf="visibleArray[4]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[4]" class="upper-arrow-blue"></section>
+          <button (mouseover)="changeSchoolBackgroundImage(headerdaten?.school, true)"
+                  (mouseleave)="changeSchoolBackgroundImage(headerdaten?.school, false)"
+                  [style.backgroundImage]="schoolBackgroundImage" type="button" class="nav-button" id="school"></button>
+          <div *ngIf=visibleArray[4] class="dd-content" id="dd-school-profile">
+            <section class="dd-header">
+              <section class="row">
+                <img [src]="headerdaten?.school?.imageUrlBig" class="col-xs-5 dd-header-picture"/>
+                <p class="col-xs-7 dd-header-text-1">
+                  {{headerdaten?.school?.name}}
+                </p>
+              </section>
+              <section class="dd-header-text-2">
+                <br/>{{headerdaten?.school?.address}}
+                <br/>{{headerdaten?.school?.country}}
+                <br/>
+                <br/>{{headerdaten?.school?.email}}
+                <br/>{{headerdaten?.school?.telefon}}
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <!-- Button Klasse + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(5)" (mouseleave)="setDdUnvisible(5)" class="dd">
+          <section *ngIf="visibleArray[5]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[5]" class="upper-arrow-blue"></section>
+          <button (mouseover)="changeGroupBackgroundImage(headerdaten?.studyGroups, true)"
+                  (mouseleave)="changeGroupBackgroundImage(headerdaten?.studyGroups, false)"
+                  [style.backgroundImage]="groupBackgroundImage" type="button" class="nav-button" id="studyGroup"></button>
+          <div *ngIf=visibleArray[5] class="dd-content" id="dd-study-group-profile">
+            <section class="dd-header">
+              <section class="row">
+                <img [src]='headerdaten?.studyGroups?.imageUrlBig' class="col-xs-5 dd-header-picture"/>
+                <p class="col-xs-7 dd-header-text-1">
+                  KLASSE<br>{{headerdaten?.studyGroups?.class}}
+                </p>
+              </section>
+              <section class="dd-header-text-2">
+                KLASSENLEHRER*IN<br>{{headerdaten["formteacher"]}}
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <!-- Trennung der rechten Buttons -->
+        <div class="split">
+        </div>
+
+        <div class="split" id="split2">
+        </div>
+
+        <!-- Buttons rechts 2 -->
+        <!-- Button Help + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(6)" (mouseleave)="setDdUnvisible(6)" class="dd">
+          <section *ngIf="visibleArray[6]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[6]" class="upper-arrow-blue"></section>
+          <button type="button" class="nav-button" id="help"></button>
+          <div *ngIf=visibleArray[6] class="dd-content" id="dd-help">
+            <section class="dd-header">
+              <section class="row">
+                <img src="images/help-big.png" class="col-xs-5 dd-header-picture"/>
+                <p class="col-xs-7 dd-header-text-1">
+                  BRAUCHST<br>DU HILFE?
+                </p>
+              </section>
+            </section>
+            <a href="http://www.check-lehrerzimmer.com/hilfe/erste-schritte/" target="_blank">SO GEHT´S!</a>
+            <a href="http://www.check-lehrerzimmer.com/tutorial/" target="_blank">VIDEO-TUTORIALS</a>
+            <a href="http://www.check-lehrerzimmer.com/faq/" target="_blank">HÄUFIG GESTELLTE FRAGEN</a>
+            <a href="http://www.check-lehrerzimmer.com/contact/" target="_blank">KONTAKT</a>
+          </div>
+        </div>
+
+        <!-- Button Logout + Dropdown-Menu -->
+        <div (mouseover)="setDdVisible(7)" (mouseleave)="setDdUnvisible(7)" class="dd">
+          <section *ngIf="visibleArray[7]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[7]" class="upper-arrow-blue"></section>
+          <button type="button" class="nav-button" id="logout"></button>
+          <div *ngIf=visibleArray[7] class="dd-content" id="dd-logout">
+            <section class="dd-header">
+              <section class="row">
+                <img src="images/logout-big.png" class="col-xs-5 dd-header-picture"/>
+                <p class="col-xs-7 dd-header-text-1">
+                  MÖCHTEST DU<br>CHECK!<br>VERLASSEN?
+                </p>
+              </section>
+            </section>
+            <a (click)="logout()">JA</a>
+            <a href="#">NEIN</a>
+          </div>
+        </div>
+
+      </section>
+    </section>
+  </section>
+</nav>

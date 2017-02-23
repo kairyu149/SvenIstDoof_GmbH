@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class SvenIstDoofGmbHFinalPage {
+export class SssPage {
   navigateTo() {
     return browser.get('/');
   }

@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div id="pictureCurrentOld" class="divCenter" *ngIf="picTopOld">
+  <img [src]="avatarPictures[currentPicture]?.avatarBigUrl" height="70" width="70" />
+</div>
+
+<div id="pictureCurrentNew" class="divCenter" *ngIf="picTopNew">
+  <img [src]="pictureCurrentUrl" height="70" width="70" />
+</div>
+
+<p id="siteTitle" class="divCenter">PROFILBILD ÄNDERN</p>
+
+<div class="divCenter">
+  <button type="submit" class="cancel" [routerLink]="['/startseite']">ABBRECHEN</button>
+  <button type="submit" class="save" (click)="changePicture()">SPEICHERN</button>
+</div>
+
+<div align="center">
+  <div id="pictureContainer">
+    <img *ngFor="let avatar of avatarPictures, let i = index" [src]="avatar.avatarBigUrl" height="70px" width="70px"
+         class="pictureRowMargin" (click)="changePictureCurrent(avatar.avatarBigUrl, i)"/>
+  </div>
+</div>
+
+
+<app-modal-error [(visible)]="errorService.error.show"></app-modal-error>
+<app-modal-success [(visible)]="errorService.success.show"></app-modal-success>
+<app-modal-gear [(visible)]="errorService.gear.show"></app-modal-gear>
+
+<app-footer></app-footer>

@@ -1,0 +1,61 @@
+
+
+/* LOGIN */
+.inputLogin {
+  border-radius: 8px;
+  padding:3px;
+  margin: auto;
+  height: 40px;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 13px;
+  align-self: center;
+}
+
+#Login {
+  text-align: center;
+}
+
+#LoginInputUser {
+  width: 300px;
+  color: grey;
+  font-family: brandon-grotesque-black;
+}
+
+#LoginInputPassword {
+  width: 300px;
+  color: #001a3a;
+  font-family: roboto-thin;
+}
+
+
+.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field-border {
+  border: 3px solid #d3ddf2;
+  border-radius: 7px;
+}
+
+/*LOGIN ENDE*/
+
+/* Farbe aendern */
+.field-border:focus {
+  border-color: #8da6d6;
+}
+
+.buttonLogin {
+  height: 40px;
+  width: 150px;
+  background-color: #001a3a;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  font-family: brandon-grotesque-black;
+}
+

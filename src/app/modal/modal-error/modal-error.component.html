@@ -1,0 +1,12 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+  <ng-content></ng-content>
+
+  <img src="images/warning.png" height="70" width="70" class="displayed"/>
+
+  <p id="dialogText">{{errorService.error.text}}</p>
+
+
+  <button *ngIf="closable" (click)="errorService.resetError()" aria-label="Close" class="dialog_close-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+
+</div>
+<div *ngIf="visible" class="overlay"></div>
